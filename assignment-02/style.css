@@ -1,0 +1,84 @@
+    body{
+        margin:0;
+        background: rgb(255, 255, 255);
+    }
+    #heroImage{
+        height:auto;
+        width:100%;
+        /* background-blend-mode: multiply;
+        background: rgb(0, 0, 255);
+        opacity:1;
+        overflow: hidden; */
+    }
+    .colorized{
+        height: 100vh;
+        width: 100vw;
+        /* background-image: url("a02-assets/beaverstate-01.jpg"); */
+        background: url("a02-assets/beaverstate-01.jpg"), blue;
+        background-blend-mode: multiply;
+        background-size: cover;
+        /* filter: grayscale(100%); */
+    }
+    #introSection{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }   
+    #article{
+        margin:100px auto;
+        max-width:650px;
+        line-height: 1.6;
+        font-family:"Times New Roman", Times, serif;
+        font-size:18px;
+        color:rgb(0, 0, 0);
+        padding:0 10px
+    }
+    .bodyText{
+        margin-top:20%;
+    }
+    h1{
+        color:rgb(255, 255, 255);
+        line-height:1.6;
+        font-family:Arial, Helvetica, sans-serif;
+        font-size:100px;
+        font-weight:normal;
+        text-align:center;
+    }
+    .quote{
+        color:rgb(255, 255, 255);
+        margin:0px 0px 5% 0px;
+        line-height:1.6;
+        font-size:18px;
+        font-weight:normal;
+    }
+    .attribution{
+        color:rgb(255, 255, 255);
+        text-align:right;
+    }
+    .dedication{
+        color:rgb(255, 255, 255);
+        margin:5% 0px 5% 10%;
+        line-height:1.2;
+        font-size:18px;
+        font-weight:normal;
+        font-style:italic;
+    }
+    a{
+        color:rgb(0,0,255);
+        text-decoration:none;
+    }
+    a:hover{
+        text-decoration:underline;
+    }
+    p{
+        text-align:justify;
+    }
+    #return{
+        color:white;
+        font-family:'Courier New', Courier, monospace;
+        font-size:16px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+    }
