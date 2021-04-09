@@ -16,9 +16,35 @@
         #heroImage{
             height: 100vh;
             width: 100vw;
-            background: url("a02-assets/beaverstate-01.jpg"), blue;
+            background: url("a02-assets/beaverstate-01.jpg");
+            background-color: blue;
             background-blend-mode: multiply;
             background-size: cover;
+
+            animation-name: oceanBlues;
+            animation-duration: 20.0s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-play-state: running;
+        }
+        @keyframes oceanBlues {
+            0% {
+                background-color: blue;
+            }
+            25% {
+                background-color: blueviolet; 
+            }
+            50% {
+                background-color: aqua;
+            }
+            75% {
+                background-color: cornflowerblue;
+            }
+            100% {
+                background-color: blue;
+            }
         }
         #title{
             position: absolute;
@@ -115,6 +141,11 @@
         }
         .mediaContainer img {
             width:100%;
+            filter: grayscale(100%);
+            transition: filter 0.5s ease-in 0.0s;
+        }
+        .mediaContainer img:hover {
+            filter: none;
         }
 
 
@@ -133,11 +164,41 @@
     
 
     a{
-        color:rgb(0,0,255);
         text-decoration:none;
+        color:rgb(0,0,255);
+
+        /* transition-property: color;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 0.1s; */
+
+        /*transition: color 1s ease-in-out 0.1s;*/
     }
     a:hover{
-        text-decoration:underline;
+        animation-name: linkColors;
+        animation-duration: 2.0s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-play-state: running;
+    }
+    @keyframes linkColors {
+        0% {
+            color: blue;
+        }
+        25% {
+            color: blueviolet; 
+        }
+        50% {
+            color: aqua;
+        }
+        75% {
+            color: cornflowerblue;
+        }
+        100% {
+            color: blue;
+        }
     }
     .caption{
         color:rgb(0,0,255);
