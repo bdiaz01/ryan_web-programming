@@ -2,11 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.2;
 }
 body{
     background: rgb(255, 255, 255);
-    line-height: 1.2;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
     color: rgb(0, 0, 0);
@@ -14,60 +14,92 @@ body{
     overflow: hidden;
 }
 
+#backgroundHover {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: url("assignment-02/a02-assets/beaverstate-googlemaps.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 33vw;
+    opacity: 0;
+}
+#backgroundHover.show {
+    opacity: 1;
+}
+#oceanImage {
+    background: url("home-assets/pacha-wide.jpeg");
+}
+#project2 {
+}
+
 .introSticky {
     display: flex;
     position: fixed;
-    margin: 20px;
-    height: calc((100vw - 20px) / 5);
+    height: calc(100vw / 5);
+    z-index: 1000;
 }
 .nameCell {
-    width: calc(((100% - 20px) / 5) * 2);
+    width: calc((100% / 5) * 2);
+    padding-top: 20px;
+    padding-left: 20px;
     height: 100%;
 }
 .infoCell {
-    width: calc(((100% - 20px) / 5) * 3);
+    width: calc((100% / 5) * 3);
+    padding: 20px;
     height: 100%;
+    padding-left: 0 .25em;
 }
 
 .cabinet {
-    padding-top: calc((100vw - 20px) / 5);
     display: flex;
     position: fixed;
-    overflow: hidden;
-    margin: 0px 20px;
+    padding: 0px 0px;
+    height: 100%;
+    z-index: 1000;
 }
 .drawer {
-    width: calc(((100% - 20px) / 5) * 2);
+    padding-top: calc(100vw / 5);
+    padding-left: 20px;
+    width: calc((100% / 5) * 2);
     height: 100%;
+    overflow-y: scroll;
 }
     .shelves {
-        margin: 0;
+        padding-top: 8px;
         width: 100%;
         height: 100%;
-        overflow-y: scroll;
         /*flex-direction: row;
         flex: auto;
         flex-wrap: wrap;*/
     }
     .cell {
         float: left;
-        width: calc((100% - 20px) / 2);
-        height: calc((100vw - 20px) / 6);
+        width: calc(100% / 2);
+        height: calc(100vw / 6);
         /*border: 1px solid black;*/
     }
 
 .textArea {
-    width: calc(((100% - 20px) / 5) * 3);
-    font-size: 2.5em;
+    padding-top: calc(100vw / 5);
+    padding-right: 20px;
+    padding-left: 20px;
+    width: calc((100% / 5) * 3);
     height: 100%;
     overflow-y: scroll;
 }
-
+.textArea p {
+    font-size: 2.25rem;
+    margin-bottom: 2.25rem;
+}
 
 a{
     text-decoration: none;
     color: blue;
-
+}
+.dedication {
+    font-style: italic;
 }
 
 @media screen and (max-width: 768px) {
